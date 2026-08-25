@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "main": "index.ts",
   "dependencies": {
+    "@expo/metro-runtime": "~57.0.13",
+    "@react-native-async-storage/async-storage": "^3.1.1",
     "expo": "~57.0.16",
     "expo-status-bar": "~57.0.1",
     "react": "19.2.3",
-    "react-native": "0.86.2"
+    "react-dom": "19.2.3",
+    "react-native": "0.86.2",
+    "react-native-web": "^0.21.2"
   },
   "devDependencies": {
     "@types/react": "~19.2.2",
@@ -16,7 +20,10 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "test": "tsc --ignoreConfig src/lib/time.ts src/lib/entries.ts --outDir .test-build --module nodenext --target es2022 --moduleResolution nodenext --skipLibCheck && node --test tests/ && rm -rf .test-build",
+    "typecheck": "tsc --noEmit"
   },
-  "private": true
+  "private": true,
+  "description": "Freelance time tracking whose output is invoice lines."
 }
