@@ -1,5 +1,7 @@
 # Tally
 
+[![CI](https://github.com/Mustafa0u0/tally/actions/workflows/ci.yaml/badge.svg)](https://github.com/Mustafa0u0/tally/actions/workflows/ci.yaml)
+
 Freelance time tracking whose output is invoice lines.
 
 <p>
